@@ -1,0 +1,77 @@
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+main{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#gameBody{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+.flip-card {
+    background-color: transparent;
+    width: 28%;
+    height: 250px;
+    margin-bottom: 4%;
+    perspective: 1000;
+    
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 10px lightgray;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+.rotatedCard{
+    transform: rotateY(180deg);
+}
+
+  /* hover testing */
+/* .flip-card-inner:hover {
+    transform: rotateY(180deg);
+} */
+  
+
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back{
+transform: rotateY(180deg);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.flip-card-inner.flip{
+  transform: rotateY(180deg);
+}
+
+.disabled{
+  pointer-events: none;
+}
+img{
+  width: 100%;
+}
